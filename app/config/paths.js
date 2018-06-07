@@ -7,9 +7,16 @@ const url = require('url');
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebookincubator/create-react-app/issues/637
 const appDirectory = fs.realpathSync(process.cwd());
+console.log("appDirectory",appDirectory)
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
-const envPublicUrl = process.env.PUBLIC_URL;
+
+let envPublicUrl = process.env.PUBLIC_URL;
+
+
+//把资源地址改为绝对路径
+envPublicUrl = path.resolve(appDirectory, "../electron/build");
+
 
 function ensureSlash(path, needsSlash) {
   const hasSlash = path.endsWith('/');
@@ -24,6 +31,9 @@ function ensureSlash(path, needsSlash) {
 
 const getPublicUrl = appPackageJson =>
   envPublicUrl || require(appPackageJson).homepage;
+
+
+
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
