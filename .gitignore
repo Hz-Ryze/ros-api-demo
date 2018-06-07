@@ -60,6 +60,15 @@ typings/
 # next.js build output
 .next
 
+# OSX
+#
+.DS_Store
+
 
 # Intellij IDEA
 .idea/
+*.iml
+
+# project
+**/node_modules/
+**/build/
