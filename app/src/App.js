@@ -5,9 +5,15 @@ const { SubMenu } = Menu;
 
 class App extends Component {
     render() {
+
+        const logo = require("./assert/imgs/Icon-Small.png")
+
+
         return (
             <Layout >
                 <Sider theme="light">
+                    <img alt="example" src={logo} />
+
                     <Menu
                         mode="inline"
                         defaultSelectedKeys={['1']}
