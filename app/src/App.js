@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
 import { Layout,Menu,Icon } from 'antd';
+import {Profile} from './components/Profile'
+
 const {Sider, Content} = Layout;
 const { SubMenu } = Menu;
 
+
 class App extends Component {
+
+
+    handleClick = (e) => {
+        console.log('click ', e.key);
+
+        if(e.key === "profile"){
+            this.content = <Profile />;
+        }
+
+        this.setState({});
+    }
+
     render() {
 
         const logo = require("./assert/imgs/Icon-Small.png")
@@ -16,13 +31,14 @@ class App extends Component {
 
                     <Menu
                         mode="inline"
-                        defaultSelectedKeys={['1']}
+                        onClick={this.handleClick}
+                        defaultSelectedKeys={['profile']}
                         defaultOpenKeys={['sub1']}
                         style={{ height: '100%', borderRight: 0 }}
                     >
-                        <SubMenu key="sub1" title={<span><Icon type="user" />subnav 1</span>}>
-                            <Menu.Item key="1">option1</Menu.Item>
-                            <Menu.Item key="2">option2</Menu.Item>
+                        <SubMenu key="sub1" title={<span><Icon type="user" /> ROS 简介</span>}>
+                            <Menu.Item key="profile">1. 介绍</Menu.Item>
+                            <Menu.Item key="setup">2. 安装</Menu.Item>
                             <Menu.Item key="3">option3</Menu.Item>
                             <Menu.Item key="4">option4</Menu.Item>
                         </SubMenu>
@@ -41,7 +57,7 @@ class App extends Component {
                         </SubMenu>
                     </Menu>
                 </Sider>
-                <Content>Content</Content>
+                <Content>{this.content }</Content>
             </Layout>
         );
     }
