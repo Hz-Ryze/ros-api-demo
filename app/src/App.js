@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout,Menu,Icon } from 'antd';
-import {Profile} from './components/Profile'
+import {WhatIsRos} from './components/WhatIsRos'
 import {Installation} from './components/Installation'
 
 const {Sider, Content} = Layout;
@@ -13,8 +13,8 @@ class App extends Component {
     handleClick = (e) => {
         console.log('click ', e.key);
 
-        if(e.key === "profile"){
-            this.content = <Profile />;
+        if(e.key === "WhatIsRos"){
+            this.content = <WhatIsRos />;
         }
         if(e.key === "Installation"){
             this.content = <Installation />;
@@ -41,7 +41,7 @@ class App extends Component {
                         style={{ height: '100%', borderRight: 0 }}
                     >
                         <SubMenu key="sub1" title={<span><Icon type="user" />简介</span>}>
-                            <Menu.Item key="profile">1. 什么是 ROS</Menu.Item>
+                            <Menu.Item key="WhatIsRos">1. 什么是 ROS</Menu.Item>
                             <Menu.Item key="profile">1. 什么是 ROS</Menu.Item>
                             <Menu.Item key="Installation">2. 安装</Menu.Item>
                             <Menu.Item key="3">option3</Menu.Item>
