@@ -40,8 +40,9 @@ class App extends Component {
                         defaultOpenKeys={['sub1']}
                         style={{ height: '100%', borderRight: 0 }}
                     >
-                        <SubMenu key="sub1" title={<span><Icon type="user" /> ROS 简介</span>}>
-                            <Menu.Item key="profile">1. 介绍</Menu.Item>
+                        <SubMenu key="sub1" title={<span><Icon type="user" />简介</span>}>
+                            <Menu.Item key="profile">1. 什么是 ROS</Menu.Item>
+                            <Menu.Item key="profile">1. 什么是 ROS</Menu.Item>
                             <Menu.Item key="Installation">2. 安装</Menu.Item>
                             <Menu.Item key="3">option3</Menu.Item>
                             <Menu.Item key="4">option4</Menu.Item>
