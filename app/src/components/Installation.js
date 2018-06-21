@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Collapse } from 'antd';
 const Panel = Collapse.Panel;
 
-export class Setup extends Component {
+export class Installation extends Component {
 
 
     callback = (key) => {

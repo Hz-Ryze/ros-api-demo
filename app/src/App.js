@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout,Menu,Icon } from 'antd';
 import {Profile} from './components/Profile'
-import {Setup} from './components/Setup'
+import {Installation} from './components/Installation'
 
 const {Sider, Content} = Layout;
 const { SubMenu } = Menu;
@@ -16,8 +16,8 @@ class App extends Component {
         if(e.key === "profile"){
             this.content = <Profile />;
         }
-        if(e.key === "setup"){
-            this.content = <Setup />;
+        if(e.key === "Installation"){
+            this.content = <Installation />;
         }
 
         this.setState({});
@@ -42,7 +42,7 @@ class App extends Component {
                     >
                         <SubMenu key="sub1" title={<span><Icon type="user" /> ROS 简介</span>}>
                             <Menu.Item key="profile">1. 介绍</Menu.Item>
-                            <Menu.Item key="setup">2. 安装</Menu.Item>
+                            <Menu.Item key="Installation">2. 安装</Menu.Item>
                             <Menu.Item key="3">option3</Menu.Item>
                             <Menu.Item key="4">option4</Menu.Item>
                         </SubMenu>
