@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout,Menu,Icon } from 'antd';
 import {Profile} from './components/Profile'
+import {Setup} from './components/Setup'
 
 const {Sider, Content} = Layout;
 const { SubMenu } = Menu;
@@ -14,6 +15,9 @@ class App extends Component {
 
         if(e.key === "profile"){
             this.content = <Profile />;
+        }
+        if(e.key === "setup"){
+            this.content = <Setup />;
         }
 
         this.setState({});
